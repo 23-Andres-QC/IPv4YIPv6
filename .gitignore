@@ -1,0 +1,32 @@
+# Entornos virtuales Python
+venv/
+.venv/
+env/
+venv_check/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Variables de entorno
+.env
+.env.*
+
+# Logs
+*.log
+*.tmp
+
+# Docker
+.dockerignore
+
+# Claude memory
+.claude/

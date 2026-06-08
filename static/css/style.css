@@ -1,0 +1,316 @@
+/* ═══════════════════════════════════════════════════
+   IP Manager - Estilos personalizados
+   Bootstrap 5 + diseño responsive (PC · Tablet · Celular)
+═══════════════════════════════════════════════════ */
+
+:root {
+  --primary:     #0d6efd;
+  --success:     #198754;
+  --info:        #0dcaf0;
+  --warning:     #ffc107;
+  --danger:      #dc3545;
+  --secondary:   #6c757d;
+  --dark:        #212529;
+  --card-radius: 12px;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,.08);
+  --shadow-md:   0 4px 20px rgba(0,0,0,.12);
+}
+
+/* ─── Tipografía base ─── */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f0f4f8;
+  color: #212529;
+  min-height: 100vh;
+}
+
+.font-mono {
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: .92rem;
+}
+
+/* ─── Hero Banner ─── */
+.hero-banner {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 50%, #084298 100%);
+  padding: 3rem 1rem;
+}
+
+.hero-banner h1 {
+  text-shadow: 0 2px 10px rgba(0,0,0,.3);
+}
+
+/* ─── Secciones ─── */
+.section-header {
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+
+/* ─── Cards ─── */
+.card {
+  border-radius: var(--card-radius) !important;
+  transition: box-shadow .2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md) !important;
+}
+
+.card-header {
+  border-radius: var(--card-radius) var(--card-radius) 0 0 !important;
+  font-weight: 600;
+  padding: .75rem 1.25rem;
+}
+
+/* ─── Tarjetas de resumen ─── */
+.summary-card {
+  border-radius: var(--card-radius);
+  color: white;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.summary-card .label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  opacity: .85;
+  font-weight: 500;
+}
+
+.summary-card .value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Roboto Mono', monospace;
+  word-break: break-all;
+}
+
+.summary-card .icon {
+  font-size: 2rem;
+  opacity: .4;
+}
+
+/* Gradientes para tarjetas */
+.card-gradient-blue   { background: linear-gradient(135deg, #0d6efd, #0a58ca); }
+.card-gradient-green  { background: linear-gradient(135deg, #198754, #157347); }
+.card-gradient-teal   { background: linear-gradient(135deg, #20c997, #0f9b72); }
+.card-gradient-purple { background: linear-gradient(135deg, #6f42c1, #5a32a3); }
+.card-gradient-orange { background: linear-gradient(135deg, #fd7e14, #dc6a0e); }
+.card-gradient-red    { background: linear-gradient(135deg, #dc3545, #b02a37); }
+.card-gradient-cyan   { background: linear-gradient(135deg, #0dcaf0, #0aa5c4); }
+.card-gradient-indigo { background: linear-gradient(135deg, #6610f2, #520bc2); }
+
+/* ─── Tabla de resultados ─── */
+.table th {
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.table td {
+  font-family: 'Roboto Mono', monospace;
+  font-size: .88rem;
+  vertical-align: middle;
+}
+
+.table td:first-child {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #495057;
+  width: 45%;
+}
+
+/* ─── Badge de clasificación ─── */
+.badge-classification {
+  font-size: .85rem;
+  padding: .4em .8em;
+  border-radius: 20px;
+}
+
+/* ─── Placeholders ─── */
+.border-dashed {
+  border: 2px dashed #dee2e6 !important;
+  background: #fafbfc;
+  min-height: 200px;
+}
+
+/* ─── Interfaces Cards ─── */
+.interface-card {
+  border-left: 4px solid var(--success);
+  border-radius: var(--card-radius);
+  background: white;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease;
+}
+
+.interface-card:hover {
+  transform: translateY(-2px);
+}
+
+.interface-card .iface-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.interface-card .iface-detail {
+  font-family: 'Roboto Mono', monospace;
+  font-size: .85rem;
+  color: #495057;
+}
+
+/* ─── Loading spinner ─── */
+.loading-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  color: var(--secondary);
+}
+
+/* ─── Historial ─── */
+#history-table td {
+  font-family: 'Roboto Mono', monospace;
+  font-size: .82rem;
+}
+
+#history-table td:nth-child(3) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* ─── Monitor de Tráfico ─── */
+#traffic-table td, #traffic-table th {
+  font-family: 'Roboto Mono', monospace;
+  font-size: .82rem;
+  white-space: nowrap;
+}
+
+#traffic-table td:first-child {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #212529;
+}
+
+/* Punto parpadeante LIVE */
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #dc3545;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+/* Barras de velocidad */
+.traffic-bar-row {
+  margin-bottom: .6rem;
+}
+
+.traffic-bar-label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: #495057;
+  min-width: 120px;
+  display: inline-block;
+}
+
+.traffic-bar-track {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .2rem;
+}
+
+.traffic-bar-fill {
+  height: 10px;
+  border-radius: 5px;
+  transition: width .5s ease;
+  min-width: 4px;
+}
+
+.traffic-bar-send { background: linear-gradient(90deg, #ffc107, #fd7e14); }
+.traffic-bar-recv { background: linear-gradient(90deg, #0d6efd, #0dcaf0); }
+
+.traffic-bar-val {
+  font-size: .78rem;
+  color: #6c757d;
+  font-family: 'Roboto Mono', monospace;
+  white-space: nowrap;
+}
+
+/* Badge de estado interfaz */
+.iface-status-up   { color: #198754; }
+.iface-status-down { color: #dc3545; }
+
+/* ─── Navbar ─── */
+.navbar-brand {
+  letter-spacing: .03em;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color .15s ease;
+}
+
+/* ─── Toast ─── */
+#toast-notif.bg-success { background: var(--success) !important; }
+#toast-notif.bg-danger  { background: var(--danger)  !important; }
+
+/* ─── Range Slider ─── */
+.form-range {
+  accent-color: var(--primary);
+}
+
+/* ─── Responsive adjustments ─── */
+
+/* Tablet (md) */
+@media (max-width: 991px) {
+  .hero-banner h1 { font-size: 2rem; }
+  .section-title  { font-size: 1.3rem; }
+  .summary-card   { padding: .75rem 1rem; }
+  .summary-card .value { font-size: .95rem; }
+}
+
+/* Celular (sm / xs) */
+@media (max-width: 575px) {
+  .hero-banner { padding: 2rem .5rem; }
+  .hero-banner h1 { font-size: 1.6rem; }
+  .hero-banner .lead { font-size: .95rem; }
+  .section-title  { font-size: 1.1rem; }
+  .card-header    { font-size: .9rem; }
+
+  .summary-card {
+    padding: .6rem .8rem;
+  }
+  .summary-card .value { font-size: .85rem; }
+  .summary-card .icon  { font-size: 1.5rem; }
+
+  .table td, .table th { font-size: .78rem; }
+
+  #history-table { font-size: .75rem; }
+}
+
+/* ─── Scrollbar personalizado ─── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f3f5; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #adb5bd; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6c757d; }

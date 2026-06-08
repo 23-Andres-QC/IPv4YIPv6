@@ -1,0 +1,35 @@
+# ═══════════════════════════════════════════════════════════════
+#  IP Manager - Docker Compose
+#  Servicio único: ip-manager en puerto 8000
+# ═══════════════════════════════════════════════════════════════
+
+services:
+  ip-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ip-manager:latest
+    container_name: ip-manager
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    volumes:
+      # Montar código fuente (desarrollo)
+      - ./app:/app/app:ro
+      - ./static:/app/static:ro
+      - ./templates:/app/templates:ro
+    networks:
+      - ip-network
+
+networks:
+  ip-network:
+    driver: bridge
