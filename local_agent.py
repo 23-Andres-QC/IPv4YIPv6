@@ -169,7 +169,7 @@ def get_interfaces():
 
 
 # ─────────────────────────────────────────────
-#  Endpoint: tráfico en tiempo real
+#  Endpoint: tráfico 
 # ─────────────────────────────────────────────
 
 @agent.get("/traffic")
